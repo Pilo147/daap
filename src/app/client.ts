@@ -1,7 +1,7 @@
 import { createThirdwebClient } from "thirdweb";
+import { ethereum, base, bsc } from "thirdweb/chains"; // Import chain yang diinginkan
 
-// Replace this with your client ID string
-// refer to https://portal.thirdweb.com/typescript/v5/client on how to get a client ID
+// Ganti dengan client ID Anda
 const clientId = process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID;
 
 if (!clientId) {
@@ -10,4 +10,5 @@ if (!clientId) {
 
 export const client = createThirdwebClient({
   clientId: clientId,
+  chains: [ethereum, base, bsc], // Tambahkan chain di sini
 });
